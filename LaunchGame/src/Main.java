@@ -34,7 +34,13 @@ class TicTacToe
 
     void placeMark(int row, int col, char mark)
     {
-        board[row][col] = mark;
+        if (row >= 0 && row <= 2 && col >=0 && col <= 2)
+        {
+            board[row][col] = mark;
+        }
+        else {
+            System.out.println("Invalid Position");
+        }
     }
 }
 
