@@ -53,6 +53,17 @@ class TicTacToe
         }
         return false;
     }
+
+    boolean checkRowWin() {
+        for (int i=0; i<=2; i++)
+        {
+            if (board[i][0] == board[i][1] && board[i][1] == board[i][2])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 public class Main {
@@ -65,5 +76,6 @@ public class Main {
         t.placeMark(0, 2, 'O');
         t.placeMark(1, 0, 'X');
         t.disBoard();
+        System.out.println(t.checkColWin());
     }
 }
