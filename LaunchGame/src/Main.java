@@ -42,6 +42,17 @@ class TicTacToe
             System.out.println("Invalid Position");
         }
     }
+
+    boolean checkColWin() {
+        for (int j=0; j<=2; j++)
+        {
+            if (board[0][j] == board[1][j] && board[1][j] == board[2][j])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 public class Main {
@@ -50,6 +61,9 @@ public class Main {
         t.disBoard();
         t.placeMark(0, 0, 'X');
         t.placeMark(2, 1, 'O');
+        t.placeMark(2, 0, 'X');
+        t.placeMark(0, 2, 'O');
+        t.placeMark(1, 0, 'X');
         t.disBoard();
     }
 }
