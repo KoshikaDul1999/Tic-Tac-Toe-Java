@@ -80,6 +80,18 @@ class TicTacToe
     }
 }
 
+class HumanPlayer
+{
+    String name;
+    char mark;
+
+    HumanPlayer(String name, char mark)
+    {
+        this.name = name;
+        this.mark = mark;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         TicTacToe t = new TicTacToe();
