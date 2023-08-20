@@ -64,6 +64,20 @@ class TicTacToe
         }
         return false;
     }
+
+    boolean checkDiagWin()
+    {
+        if(board[0][0] == board[1][1]
+            && board[1][1] == board[2][2]
+            || board[0][2] == board[1][1]
+                && board[0][0] == board[2][0])
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
 public class Main {
@@ -71,11 +85,11 @@ public class Main {
         TicTacToe t = new TicTacToe();
         t.disBoard();
         t.placeMark(0, 0, 'X');
-        t.placeMark(2, 1, 'O');
-        t.placeMark(2, 0, 'X');
+        t.placeMark(1, 1, 'X');
+        t.placeMark(2, 2, 'X');
         t.placeMark(0, 2, 'O');
         t.placeMark(1, 0, 'X');
         t.disBoard();
-        System.out.println(t.checkColWin());
+        System.out.println(t.checkDiagWin());
     }
 }
